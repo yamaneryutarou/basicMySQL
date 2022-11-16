@@ -1,0 +1,22 @@
+2-8
+1
+	テーブル「tb」の「uria」の合計値の前後に「合計は」「万円です」の文字列を付けて表示してください。
+	なお、表示する項目名には「売上」のエイリアスを付けること
+	SELECT CONCAT('合計は',uria,'万円です') AS 売上 FROM tb;
+	
+2
+	テーブル「tb」で、カラム「uria」が50以上で、「bang」ごとの「uria」の平均で120以上のものだけを、「uria」の平均の多いものから
+	表示してください。
+	SELECT
+		bang,
+		AVG(uria)
+	FROM
+		tb
+	WHERE
+		uria >= 50
+	GROUP BY
+		bang
+	HAVING
+		AVG(uria) >= 120
+	ORDER BY
+		AVG(uria) DESC;
