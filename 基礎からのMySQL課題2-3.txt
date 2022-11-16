@@ -1,0 +1,8 @@
+2-3
+1	
+	ユーザ作成
+	CREATE USER nisizawa@localhost IDENTIFIED BY '1234';
+
+2
+	ユーザ権限を設定
+	GRANT ALL ON db1.* TO nisizawa@localhost;
