@@ -1,0 +1,8 @@
+2-4
+1
+	1行で2回tb1を全表示する。
+	SELECT * FROM tb1;SELECT * FROM tb1
+	
+2
+	ユーザ情報を取得する。
+	SELECT user FROM user;
