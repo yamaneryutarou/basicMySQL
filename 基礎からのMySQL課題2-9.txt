@@ -1,0 +1,8 @@
+2-9
+1
+	「zaiko」テーブルのカラム「c」の値が、今現在より5年前以前のものを除いたレコードだけを抽出し、テーブル「new_zaiko」を作ってください。
+	ただし「今現在より5年前」の日時は次で表すものとします。NOW() - INTERVAL 5 YEAR
+	
+	CREATE TABLE new_zaiko
+	SELECT * FROM zaiko
+	WHERE c > NOW() - INTERVAL 5 YEAR;
