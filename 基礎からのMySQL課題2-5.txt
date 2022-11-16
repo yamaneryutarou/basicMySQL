@@ -1,0 +1,14 @@
+2-5
+1
+	「年月日時分秒」の値が保管できるカラム「hizu」を持つテーブル「hizu_ziko」を作成し、「2013年11月17日20時35分15秒」を挿入する。
+	CREATE TABLE hizu_ziko #hizu_zikoテーブル
+	(hizu DATETIME);
+	
+	INSERT INTO hizu_ziko
+	VALUES
+	('2013-11-17 20:35:15');
+	
+	
+2
+	MySQLモニタのプロンプトを「現在のデータベース名：ホスト名>」の表示設定にする。
+	prompt \d:\h>
