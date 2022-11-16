@@ -1,0 +1,31 @@
+2-10
+1
+	テーブル「tb」で、「uria」の少ないものから順位を付け、1番から順に、「bang」、「uria」順位を表示する。
+	SELECT
+		tb1.bang, #社員番号
+		tb1.uria, #売上
+		COUNT(*)
+	FROM
+		tb AS tb1
+	INNER JOIN
+		tb AS tb2
+	WHERE
+		tb1.uria >= tb2.uria #売上
+	GROUP BY
+		tb1.uria;
+		
+		
+2
+	テーブル「tb1」および「tb」で、「tb1」に存在するレコードだけテーブル「tb」から抽出してください。
+	SELECT
+		*
+	FROM
+		tb
+	WHERE EXISTS
+		(SELECT
+			*
+		FROM
+			tb1
+		WHERE
+			tb.bang = tb1.bang
+		);
