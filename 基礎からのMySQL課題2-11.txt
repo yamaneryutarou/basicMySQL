@@ -1,0 +1,20 @@
+2-11
+1
+	テーブル「tb」で、カラム「uria」が50以上で、「bang」ごとの「uria」の平均で120以上のものだけを、
+	「uria」の平均の多いものから表示するビュー「v_uria」を作成してください。
+	CREATE VIEW
+		v_uria
+	AS
+		SELECT
+			bang, #社員番号
+			AVG(uria) #平均売上
+		FROM
+			tb
+		WHERE
+			uria >= 50 #売上が50以上
+		GROUP BY
+			bang #社員番号
+		HAVING
+			AVG(uria) >= 120 #平均売上が120以上
+		ORDER BY
+			AVG(uria) DESC; #平均売上の降順
