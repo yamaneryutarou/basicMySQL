@@ -1,0 +1,8 @@
+2-6
+1
+	「syokiti_renzoku」テーブルを作成し、入力した瞬間の日時をカラム「niti」に入力してレコードを挿入する。
+	CREATE TABLE syokiti_renzoku(bang INT AUTO_INCREMENT PRIMARY KEY,niti DATETIME)AUTO_INCREMENT = 100;
+	INSERT INTO syokiti_renzoku
+		(niti)
+	VALUES 
+		(NOW()); 
