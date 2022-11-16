@@ -1,0 +1,6 @@
+2-7
+1
+	「nadake」テーブルに「tb1」のカラム「nama」のテーブルだけを挿入してください。
+	INSERT INTO nadake 
+	(a)
+	select nama from tb1;
